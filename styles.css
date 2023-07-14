@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "ChalkFont";
-  src: url(/fonts/Chalktastic-r78L.ttf);
+  src: url("./fonts/Chalktastic-r78L.ttf") format("truetype");
 }
 body {
   font-family: "ChalkFont";
