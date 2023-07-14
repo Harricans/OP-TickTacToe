@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: "ChalkFont";
-  src: url(./fonts/Chalktastic-r78L.ttf);
+  src: url(https://github.com/Harricans/OP-TickTacToe/blob/main/fonts/Chalktastic-r78L.ttf);
 }
 body {
   font-family: "ChalkFont";
