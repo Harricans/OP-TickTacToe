@@ -19,7 +19,7 @@ body {
   color: var(--text);
 }
 
-header{
+header {
   margin-bottom: 10vh;
 }
 #board {
@@ -112,22 +112,22 @@ header{
   padding: 20px 0px;
 }
 
-#game-over-text{
+#game-over-text {
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-	}
+  0% {
+    transform: scale(0.95);
+  }
 
-	70% {
-		transform: scale(1.1);
-	}
+  70% {
+    transform: scale(1.1);
+  }
 
-	100% {
-		transform: scale(0.95);
-	}
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 #play-again {
@@ -170,6 +170,6 @@ header{
 
 @media only screen and (max-width: 600px) {
   header {
-    height: 0vh
+    height: 0vh;
   }
 }
