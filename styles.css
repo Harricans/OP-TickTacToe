@@ -1,0 +1,175 @@
+:root {
+  --text: #f0f0f0;
+  --background: #141414;
+  --primary: goldenrod;
+  --secondary: #0d0d0d;
+  --accent: #737373;
+}
+@font-face {
+  font-family: "ChalkFont";
+  src: url(/fonts/Chalktastic-r78L.ttf);
+}
+body {
+  font-family: "ChalkFont";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+header{
+  margin-bottom: 10vh;
+}
+#board {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  font-size: 2em;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.right-border {
+  border-right: 0.2em solid var(--accent);
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid var(--accent);
+}
+
+.strike {
+  position: absolute;
+  background-color: var(--text);
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 10px;
+  top: 15%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 10px;
+  top: 48%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 10px;
+  top: 82%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 10px;
+  left: 15%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 10px;
+  left: 48%;
+}
+
+.strike-column-3 {
+  height: 100%;
+  width: 10px;
+  left: 83%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 10px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 10px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+#game-over-area {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid var(--accent);
+  margin-top: 50px;
+  padding: 20px 0px;
+}
+
+#game-over-text{
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}
+
+#play-again {
+  font-family: "ChalkFont";
+  color: var(--text);
+  background-color: var(--secondary);
+  font-size: 1em;
+  border: none;
+  border: 5px dotted var(--accent);
+  padding: 10px;
+  background-color: transparent;
+}
+
+#play-again:hover {
+  background-color: var(--accent);
+  border: 5px solid var(--text);
+}
+
+#play-again:active {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: 0vh
+  }
+}
